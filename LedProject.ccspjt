@@ -1,0 +1,93 @@
+[PROJECT]
+Target=LedProject.hex
+Processor_Text=PIC16F84A
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=LedProject.c
+[Directories]
+Include=
+[C:\Users\ssant\Desktop\Santi\PIC Coding\LedProject]
+Type=4
+[mru-list]
+1=LedProject.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=8
+D1=24-04-2025
+D1_L=2
+D1_L1=[79282]Project Opened.
+D1_L2=[84008]Project Closed.
+D2=25-04-2025
+D2_L=5
+D2_L1=[82518]Project Opened.
+D2_L2=[82605]Started Editing.
+D2_L3=[82971]Stopped Editing.
+D2_L4=[84326]Started Editing.
+D2_L5=[84672]Stopped Editing.
+D3=27-04-2025
+D3_L=3
+D3_L1=[81145]Started Editing.
+D3_L2=[82057]Stopped Editing.
+TotalEdit=111
+TotalDebug=0
+D3_E=13
+D3_D=0
+D3_L3=[82313]Project Closed.
+D4=28-04-2025
+D4_L=6
+D4_L1=[48927]Project Opened.
+D4_L2=[83096]Started Editing.
+D4_L3=[85276]Stopped Editing.
+D4_L4=[85984]Started Editing.
+D4_L5=[86183]Stopped Editing.
+D4_E=35
+D4_D=0
+D4_L6=[86183]Project Closed.
+D5=30-04-2025
+D5_L=7
+D5_L1=[83732]Project Opened.
+D5_L2=[84122]Started Editing.
+D5_L3=[84429]Stopped Editing.
+D5_L4=[84633]Started Editing.
+D5_L5=[85067]Stopped Editing.
+D5_L6=[85359]Started Editing.
+D5_L7=[85661]Stopped Editing.
+D6=01-05-2025
+D6_L=3
+D6_L1=[109]Started Editing.
+D6_L2=[1428]Stopped Editing.
+D6_E=25
+D6_D=0
+D6_L3=[1428]Project Closed.
+D7=02-05-2025
+D7_L=2
+D7_L1=[55649]Project Opened.
+D7_L2=[72141]Project Closed.
+D8=08-05-2025
+D8_L=6
+D8_L1=[80560]Project Opened.
+D8_L2=[80767]Started Editing.
+D8_L3=[81241]Stopped Editing.
+D8_L4=[81672]Started Editing.
+D8_L5=[84052]Stopped Editing.
+D8_E=38
+D8_D=0
+D8_L6=[84343]Project Closed.
+
+[Opened Files]
+1=LedProject.c
+t1=43
+Count=1
+[LedProject.c]
+Type=4
+
+[defines]
+buildcount=16
+[Units]
+Count=1
+1=LedProject (main)

@@ -1,0 +1,12 @@
+*.hex
+*.err
+*.lst
+*.cof
+*.tre
+*.STA
+*.sym
+*.xsym
+*.esym
+*.workspace
+*.pdsprj.LAPTOP*
+_history/

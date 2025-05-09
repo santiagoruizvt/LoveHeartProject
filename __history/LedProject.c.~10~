@@ -1,0 +1,85 @@
+#include <LedProject.h>
+#fuses XT,NOWDT
+#use delay(clock=4M)
+#use fast_io(B)
+
+#define SHIFT_OUTPUT_NUMBER 8
+
+enum state{
+   INIT,
+   SEQUENCE_1,
+   SEQUENCE_2,
+   SEQUENCE_3,
+};
+
+//Function declaration
+void ShiftBits(int);
+
+void main()
+{
+   //PORT B AS OUTPUT EXCEPT RB0
+   set_tris_b(0b00000001);
+   //INITIAL STATE -- ALL LEDS TURNED OFF
+   enum state currentState;
+   currentState=INIT;
+   
+   //ACTIVATION FOR Q1 & Q2 (NPN)
+   output_high(PIN_B4); //Q1
+   output_high(PIN_B5); //Q2
+   while(TRUE)
+   {
+      if(!input(PIN_B0))
+      {
+         currentState++;
+         if(currentState>3)currentState=0;
+      }
+         
+      
+      switch (currentState)
+      {
+         case INIT:
+         break;
+         case SEQUENCE_1:
+         //TURN ON LEDS
+         output_high(PIN_B1);             //SERIAL DATA --> 0b11111111
+         ShiftBits(SHIFT_OUTPUT_NUMBER);  //SHIFT DATA TO REGISTER OUTPUTS
+         output_high(PIN_B3);
+         delay_ms(5);                     //LATCH PULSE              
+         output_low(PIN_B3);
+         delay_ms(500);
+         //TURN OFF LEDS
+         output_low(PIN_B1);             //SERIAL DATA --> 0b00000000
+         ShiftBits(SHIFT_OUTPUT_NUMBER);  //SHIFT DATA TO REGISTER OUTPUTS
+         output_high(PIN_B3);
+         delay_ms(5);                     //LATCH PULSE              
+         output_low(PIN_B3);
+         delay_ms(500);
+         break;
+         case SEQUENCE_2:
+         
+         break;
+         case SEQUENCE_3:
+         
+         break;
+         default:
+         break;
+      }
+      
+      output_B(0b00000000);
+      
+      delay_ms(100);
+      
+      output_B(0b00001111);
+      //TODO: User Code
+   }
+}
+
+void ShiftBits(int n)
+{
+   for (int i=0;i<n;i++)
+   {
+      output_high(PIN_B1);
+      delay_ms(5);
+      output_low(PIN_B1);
+   }
+}
